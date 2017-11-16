@@ -3,6 +3,7 @@ body {
 }
 .container {
   height:100vh;
+  font-size:0
 }
 .top-wrapper {
   padding:5%;
@@ -40,8 +41,9 @@ body {
 @media (min-width: 568px)  and (min-height: 320px) {
   .middle-wrapper, .bottom-wrapper {
     display: inline-block;
-    width:39.1%;
+    width:40%;
     height: 100%;
+    vertical-align: top;
   }
   .bottom-wrapper {
   }
@@ -61,7 +63,6 @@ body {
   }
   .top-wrapper {
     width:14%;
-    height:100%;
     display: inline-block;
     vertical-align: top;
     padding:3%;
