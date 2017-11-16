@@ -25,7 +25,8 @@
       HALF_RADIAN = Math.PI/HALF_CIRCLE,
       THREE_QUARTES_CIRCLE = 270,
       STARTING_ANGLE = Math.PI/HALF_CIRCLE * THREE_QUARTES_CIRCLE,
-      PROGRESS_CLASS_NAME = '.progress-bar';
+      PROGRESS_CLASS_NAME_WITH_DOT = '.progress-bar',
+      PROGRESS_CLASS_NAME = 'progress-bar';
 
 
   //Что то вроде приватных методов класса
@@ -162,7 +163,7 @@
   //Автоматическая инициализация уже созданных в DOM прогресс-баров
   if (typeof document !== "undefined") {
 
-    elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
+    elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
     for (var i = 0; i<elements.length; i++) {
       var el = elements[i];
 
