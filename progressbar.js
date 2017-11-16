@@ -165,13 +165,12 @@
 
     elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
     for (var i = 0; i<elements.length; i++) {
-      var el = elements[i],
-          dataset = el.dataset || {};
+      var el = elements[i];
 
       el.progressBar = new ProgressCircleBar(el);
-      el.progressBar.setValue(el.dataset.value);
-      el.progressBar.setAnimate(el.dataset.animated);
-      el.progressBar.setHidden(el.dataset.hidden);
+      el.progressBar.setValue(el.getAttribute('data-value'));
+      el.progressBar.setAnimate(el.getAttribute('data-animate'));
+      el.progressBar.setHidden(el.getAttribute('data-hidden'));
     }
   }
 
