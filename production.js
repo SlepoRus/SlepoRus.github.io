@@ -21,11 +21,8 @@
     }
 
     //100vh
-    bodyOnResize()
 })()
-function bodyOnResize() {
-  document.getElementsByClassName("container")[0].style.height = window.innerHeight + 'px';
-}
+
 function setValue(el, ddd) {
   var targ = document.getElementById(ddd);
 
