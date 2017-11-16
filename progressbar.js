@@ -147,16 +147,16 @@
     //Установка настроек прогресс бара
     setOptions: function(options) {
       return {
-        width: options.width || 160,
-        height: options.height || 160,
-        animate: options.animate || false,
-        hidden: options.hidden || false,
+        width: Number(options.width) || 160,
+        height: Number(options.height) || 160,
+        animate: !!options.animate || false,
+        hidden: !!options.hidden || false,
         lineWidth: options.lineWidth || '10',
         backgroundColor: options.backgroundColor || "#ddd",
         frontColor: options.frontColor || "#ffcc00",
-        radius: options.radius || 70,
-        fpsAnimation: options.fpsAnimation || 25,
-        value: 0.0
+        radius: Number(options.radius) || 70,
+        fpsAnimation: Number(options.fpsAnimation) || 25,
+        value: Number(options.value) || 0.0
       }
     },
     //Включение анимации
