@@ -82,9 +82,16 @@
   }
   //Конструктор прогресс-бара
   function ProgressCircleBar(el, options) {
-      var canvas =  getCanvas(),
-          context = canvas.getContext('2d'),
-          el = convertor(el);
+      var canvas, context, el;
+
+      try {
+        canvas =  getCanvas(),
+        context = canvas.getContext('2d'),
+        el = convertor(el);
+      }
+      catch(e) {
+        throw('Error on init - ' + e)
+      }
 
       el.appendChild(canvas);
       // Настройки прогресс-бара
