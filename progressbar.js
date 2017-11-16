@@ -68,10 +68,13 @@
   }
   // Метод проверки пришедшего элемента. Если приходит строка, пытаемся найти в DOM этот элемент.
   function convertor(el) {
+      if (!document) {
+        throw('document is undefined');
+      }
       if (!el) {
         throw('Element expected');
       } else {
-         if (typeof el === "string" && document) {
+         if (typeof el === "string") {
             el = getDOMObject(el);
          } else if (typeof el !== "object") {
             throw('Wrong format of element. Object or string required')
@@ -168,17 +171,15 @@
   }
 
   //Автоматическая инициализация уже созданных в DOM прогресс-баров
-  if (typeof document !== "undefined") {
 
-    elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
-    for (var i = 0; i<elements.length; i++) {
-      var el = elements[i];
+  elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
+  for (var i = 0; i<elements.length; i++) {
+    var el = elements[i];
 
-      el.progressBar = new ProgressCircleBar(el);
-      el.progressBar.setValue(el.getAttribute('data-value'));
-      el.progressBar.setAnimate(el.getAttribute('data-animate'));
-      el.progressBar.setHidden(el.getAttribute('data-hidden'));
-    }
+    el.progressBar = new ProgressCircleBar(el);
+    el.progressBar.setValue(el.getAttribute('data-value'));
+    el.progressBar.setAnimate(el.getAttribute('data-animate'));
+    el.progressBar.setHidden(el.getAttribute('data-hidden'));
   }
 
   return ProgressCircleBar;
