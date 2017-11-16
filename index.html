@@ -1,1 +1,52 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-wrapper">
+        <div class="progress-bar" id="ddd"></div>
+      </div>
+      <div class="bottom-wrapper">
+        <table>
+          <tr>
+            <td>
+              <input type="text" value="0" onchange="setValue(this, 'ddd')">
+            </td>
+            <td>
+              <label class="text-helper">Value</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="animate" onchange="setAnimate(this, 'ddd')">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="text-helper">Animated</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="hidden" onchange="setHidden(this, 'ddd')">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+                <label class="text-helper">Hidden</label>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="./progressbar.js"></script>
+    <script src="./production.js"></script>
+  </body>
+</html>
