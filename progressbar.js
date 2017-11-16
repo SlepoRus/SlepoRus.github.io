@@ -136,19 +136,19 @@
     setAnimate: function(status) {
       var me = this,
           animation = function() {
-              options = me.options,
-              value = options.value,
-              fps = me.options.fpsAnimation,
-              interval = setInterval(function() {
-                 value = options.value + 1;
-                 if (value > MAX_PERCENT) {
-                   me.setValue(0);
-                 } else {
-                   me.setValue(value);
-                 }
+            var options = me.options,
+                value = options.value,
+                fps = me.options.fpsAnimation,
+                interval = setInterval(function() {
+                   value = options.value + 1;
+                   if (value > MAX_PERCENT) {
+                     me.setValue(0);
+                   } else {
+                     me.setValue(value);
+                   }
 
-                 !options.animate && clearInterval(interval);
-               }, fps);
+                   !options.animate && clearInterval(interval);
+                 }, fps);
            };
 
       status && animation();
