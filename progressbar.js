@@ -31,6 +31,11 @@
 
   //Что то вроде приватных методов класса
   //Установка настроек прогресс бара
+  function checkDOM() {
+    if (!document) {
+      throw('document is undefined');
+    }
+  }
   function setOptions(options) {
       return {
         width: Number(options.width) || 160,
@@ -68,9 +73,6 @@
   }
   // Метод проверки пришедшего элемента. Если приходит строка, пытаемся найти в DOM этот элемент.
   function convertor(el) {
-      if (!document) {
-        throw('document is undefined');
-      }
       if (!el) {
         throw('Element expected');
       } else {
@@ -88,6 +90,7 @@
       var canvas, context, el;
 
       try {
+        checkDOM();
         canvas =  getCanvas(),
         context = canvas.getContext('2d'),
         el = convertor(el);
