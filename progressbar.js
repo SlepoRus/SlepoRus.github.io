@@ -165,7 +165,8 @@
 
     elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
     for (var i = 0; i<elements.length; i++) {
-      var el = elements[i];
+      var el = elements[i],
+          dataset = el.dataset || {};
 
       el.progressBar = new ProgressCircleBar(el);
       el.progressBar.setValue(el.dataset.value);
