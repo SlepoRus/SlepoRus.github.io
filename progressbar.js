@@ -132,47 +132,34 @@
       if (value > MAX_PERCENT) value = MAX_PERCENT;
       options.value = value;
     },
-    //Метод для сокрытия прогресс бара
-    hide: function(status) {
-      var el = this.element;
-
-      el.style.display = "none";
-    },
-    //Метод для отображения прогресс бара
-    show: function(status) {
-      var el = this.element;
-
-      el.style.display = "block";
-    },
-    //Анимации прогресс бара. Крутится по часовой.
-    animation: function() {
-      var me = this,
-          options = me.options,
-          value = options.value,
-          fps = this.options.fpsAnimation;
-      interval = setInterval(function() {
-         value = options.value + 1;
-
-         if (value > MAX_PERCENT) {
-           me.setValue(0);
-         } else {
-           me.setValue(value);
-         }
-
-         !options.animate && clearInterval(interval);
-       }, fps);
-    },
-
     //Включение анимации
     setAnimate: function(status) {
-      status && this.animation();
+      var me = this,
+          animation = function() {
+              options = me.options,
+              value = options.value,
+              fps = me.options.fpsAnimation,
+              interval = setInterval(function() {
+                 value = options.value + 1;
+                 if (value > MAX_PERCENT) {
+                   me.setValue(0);
+                 } else {
+                   me.setValue(value);
+                 }
+
+                 !options.animate && clearInterval(interval);
+               }, fps);
+           };
+
+      status && animation();
       this.options.animate = status;
     },
     //Спрятать элемент
     setHidden: function(status) {
-      status ? this.hide() : this.show();
-      this.options.hidden = status;
+      var el = this.element;
 
+      status ? el.style.display = "none" : el.style.display = "block";
+      this.options.hidden = status;
     }
   }
 

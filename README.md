@@ -1,5 +1,5 @@
-### Progress Circle Bar
-Getting started
+### Getting started
+#### Инициализация
 Для создание прогресс бара достаточно создать блочный элемент с классом progress-bar
 ```html
 <div class="progress-bar"></div>
@@ -17,7 +17,7 @@ var el = document.getElementById('#circle');
 var a = new ProgressCircleBar(el,options);
 ```
 где options необязательный параметр.
-### Структура
+#### Структура
 Для вызова используются методы
 ```js
 var a = new ProgressCircleBar('#circle');
@@ -26,7 +26,7 @@ a.setValue(10) //установили значение на 10
 a.setAnimate(true) //установили флаг анимирования
 a.setHidden(true) //спрятали элемент
 ```
-Так же можно указать настройки на пряму, сами options в себя включают
+Так же можно указать настройки на прямую. Сами options в себя включают
 ```js
   options = {
     width: Number(options.width) || 160, //Ширина блока
