@@ -106,10 +106,13 @@
       canvas.height = options.height;
       // Элемент, в который входит прогресс-бар
       this.element = el;
+      el.progressBar = this;
       // canvas для анимации прогресс-бара
       this.canvas = canvas;
       //Установка текущего значения прогресс бара.
       this.context = context;
+      // Отрисовка круга
+      this.setValue(options.value);
   }
 
   ProgressCircleBar.prototype = {
