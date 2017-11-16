@@ -84,26 +84,20 @@
           el = convertor(el);
 
       el.appendChild(canvas);
-
+      // Настройки прогресс-бара
       this.options = options = setOptions(options || {});
-
       canvas.width = options.width;
       canvas.height = options.height;
+      // Элемент, в который входит прогресс-бар
       this.element = el;
+      // canvas для анимации прогресс-бара
       this.canvas = canvas;
+      //Установка текущего значения прогресс бара.
       this.context = context;
   }
 
   ProgressCircleBar.prototype = {
 
-    // Настройки прогресс-бара
-    options: {},
-    // Элемент, в который входит прогресс-бар
-    element: {},
-    // canvas для анимации прогресс-бара
-    canvas: {},
-    // canvas.getContext('2d') -> взятие 2d представление canvas'а
-    context: {},
     //Установка текущего значения прогресс бара.
     setValue: function(val) {
       var results,
