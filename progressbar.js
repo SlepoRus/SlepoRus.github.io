@@ -161,12 +161,14 @@
   if (typeof document !== "undefined") {
 
     elements = document.querySelectorAll('.progress-bar');
-    elements && elements.forEach(function(el) {
+    for (var i = 0; i<elements.length; i++) {
+      var el = elements[i];
+
       el.progressBar = new ProgressCircleBar(el);
       el.progressBar.setValue(el.dataset.value);
       el.progressBar.setAnimate(el.dataset.animated);
       el.progressBar.setHidden(el.dataset.hidden);
-    })
+    }
   }
 
   return ProgressCircleBar;
