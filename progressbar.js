@@ -146,14 +146,14 @@
            };
 
       status && animation();
-      this.options.animate = status;
+      this.options.animate = !!status;
     },
     //Спрятать элемент
     setHidden: function(status) {
       var el = this.element;
 
       status ? el.style.display = "none" : el.style.display = "block";
-      this.options.hidden = status;
+      this.options.hidden = !!status;
     }
   }
 
