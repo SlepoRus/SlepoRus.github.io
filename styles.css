@@ -9,7 +9,8 @@ body {
 }
 
 .top-wrapper {
-  padding:5%;
+  height:3%;
+  padding:16px;
 }
 .top-wrapper label {
   font-size: 26px;
@@ -66,7 +67,6 @@ body {
   }
   .top-wrapper {
     width:14%;
-    padding:3%;
   }
   .middle-wrapper {
   }
