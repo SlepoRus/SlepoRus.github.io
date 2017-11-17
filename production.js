@@ -3,7 +3,6 @@
       progress = document.getElementsByClassName('progress-bar')[0],
       slice = [].slice,
       fields_array = slice.call(html_array),
-      htmlWidth = window.innerWidth,
       checkbox = fields_array.filter(function(val) {
         return val.type === "checkbox";
       }),
@@ -21,9 +20,7 @@
       }
     }
     function getNormalVH() {
-      if (window.innerHeight != htmlWidth)
       document.getElementsByClassName('container')[0].style.height = window.innerHeight + "px";
-      htmlWidth = window.innerWidth;
     }
     getNormalVH();
     window.addEventListener('resize', getNormalVH);
