@@ -6,13 +6,7 @@ html, body {
 }
 
 .container {
-  display: -moz-box;
-  display: -webkit-flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
   display: flex;
-  -webkit-flex-direction: column;
   flex-direction: column;
   padding: 12px;
   box-sizing: border-box;
@@ -27,10 +21,6 @@ html, body {
 }
 .middle-wrapper {
   position: relative;
-  -webkit-box-flex: 0 3 15em;
-  -moz-box-flex: 0 3 15em;
-  -webkit-flex: 0 3 15em;
-  -ms-flex: 0 3 15em;
   flex: 0 3 15em;
 }
 .middle-wrapper .progress-bar{
@@ -41,15 +31,12 @@ html, body {
 
 .bottom-wrapper {
   text-align: center;
-  -webkit-box-flex: 0 3 15em;
-  -moz-box-flex: 0 3 15em;
-  -webkit-flex: 0 3 15em;
-  -ms-flex: 0 3 15em;
   flex: 0 3 15em;
   position:relative;
   top:50px;
 }
 .bottom-wrapper table {
+
   margin:0 auto;
   border-spacing: 6px 6px;
 }
@@ -58,13 +45,7 @@ html, body {
 
 @media (min-width: 568px) {
   .middle-wrapper, .bottom-wrapper {
-    display: -moz-box;
-    display: -webkit-flexbox;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: flex;
-    -webkit-align-items: center;
+    display:flex;
     align-items: center;
     top:0;
   }
@@ -76,7 +57,6 @@ html, body {
     right:35px;
   }
   .container {
-    -webkit-flex-direction: row;
     flex-direction: row;
   }
 }
