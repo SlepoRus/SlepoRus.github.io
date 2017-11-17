@@ -6,10 +6,12 @@ body {
 .container {
   font-size:0;
   height: 100vh;
+  padding:16px;
+  box-sizing: border-box;
 }
 
 .top-wrapper {
-  padding:12px;
+
 }
 .top-wrapper label {
   font-size: 26px;
@@ -61,7 +63,7 @@ body {
   .middle-wrapper .progress-bar {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 40%;
     transform: translate(-50%,-50%);
   }
   .top-wrapper {
