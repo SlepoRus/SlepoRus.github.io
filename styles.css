@@ -48,7 +48,11 @@ html, body {
 
 
 
-
+@media (min-width: 768px) {
+  .middle-wrapper {
+    justify-content: space-between;
+  }
+}
 @media (min-width: 568px) {
   .middle-wrapper, .bottom-wrapper {
     display: -webkit-box;
