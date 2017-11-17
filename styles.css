@@ -26,12 +26,11 @@ html, body {
   font-size: 26px;
   line-height: 0.8;
 }
-.middle-wrapper {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 15em;
-  -ms-flex: 0 1 15em;
-  flex: 0 1 15em;
-
+.middle-wrapper, .bottom-wrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .middle-wrapper .progress-bar{
   text-align: center;
@@ -41,12 +40,12 @@ html, body {
 
 .bottom-wrapper {
   text-align: center;
-  position:relative;
-  top:50px;
 }
 .bottom-wrapper table {
   margin:0 auto;
   border-spacing: 6px 6px;
+  position:relative;
+  top:23px;
 }
 
 
@@ -68,6 +67,7 @@ html, body {
   }
   .bottom-wrapper table {
     margin: 0;
+    top:0;
   }
   .bottom-wrapper {
   }
