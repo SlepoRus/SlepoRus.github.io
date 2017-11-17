@@ -40,9 +40,7 @@ body {
   margin:0 auto;
   border-spacing: 6px 6px;
 }
-.bottom-wrapper div {
-  margin: 13px;
-}
+
 
 
 @media (min-width: 568px) {
@@ -71,6 +69,9 @@ body {
   .top-wrapper {
   }
   .middle-wrapper {
+  }
+  .container {
+    overflow:hidden;
   }
 
 }
