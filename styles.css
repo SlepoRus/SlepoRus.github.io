@@ -23,7 +23,7 @@ body {
 }
 .middle-wrapper .progress-bar{
   position:absolute;
-  top: 54%;
+  top: 60%;
   left:50%;
   transform: translate(-50%,-50%);
 }
@@ -34,7 +34,8 @@ body {
   text-align: center;
 }
 .bottom-wrapper table {
-  padding:30px;
+  position:relative;
+  top:60px;
   margin:0 auto;
   border-spacing: 6px 6px;
 }
