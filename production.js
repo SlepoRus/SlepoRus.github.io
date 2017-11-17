@@ -19,10 +19,13 @@
         checkbox[i].checked = !!progress.progressBar[name];
       }
     }
+    function getNormalVH() {
 
-    
+      document.getElementsByClassName('container')[0].style.height = window.innerHeight + "px";
+    }
+    getNormalVH();
+    window.onresize = getNormalVH;
 })()
-
 function setValue(el, ddd) {
   var targ = document.getElementById(ddd);
 
