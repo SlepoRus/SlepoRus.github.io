@@ -34,8 +34,8 @@ html, body {
 }
 .middle-wrapper .progress-bar{
   text-align: center;
-  position:relative;
-  top:60px;
+  padding-top:20%;
+  box-sizing: border-box;
 }
 
 .bottom-wrapper {
@@ -44,8 +44,8 @@ html, body {
 .bottom-wrapper table {
   margin:0 auto;
   border-spacing: 6px 6px;
-  position:relative;
-  top:23px;
+  padding-top:10%;
+  box-sizing: border-box;
 }
 
 
@@ -63,11 +63,11 @@ html, body {
     top:0;
   }
   .middle-wrapper .progress-bar {
-    top:0;
+    padding-top:0;
   }
   .bottom-wrapper table {
+    padding-top:0;
     margin: 0;
-    top:0;
   }
   .bottom-wrapper {
   }
