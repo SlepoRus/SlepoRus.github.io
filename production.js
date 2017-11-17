@@ -21,9 +21,9 @@
       }
     }
     function getNormalVH() {
-      if (window.innerHeight != windowWidth)
+      if (window.innerHeight != htmlWidth)
       document.getElementsByClassName('container')[0].style.height = window.innerHeight + "px";
-      windowWidth = window.innerWidth;
+      htmlWidth = window.innerWidth;
     }
     getNormalVH();
     window.addEventListener('resize', getNormalVH);
