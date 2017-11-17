@@ -20,7 +20,7 @@
       }
     }
     function getNormalVH() {
-      document.getElementsByClassName('container')[0].style['min-height'] = document.documentElement.clientHeight + "px";
+      document.getElementsByClassName('container')[0].style['height'] = document.documentElement.clientHeight + "px";
     }
     getNormalVH();
     window.addEventListener('resize', getNormalVH);
