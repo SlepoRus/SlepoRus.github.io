@@ -6,10 +6,11 @@ html, body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
+  font-size:0;
+  height: 100vh;
+  padding:16px;
   box-sizing: border-box;
+  max-height:100%;
 }
 
 .top-wrapper {
@@ -20,23 +21,24 @@ html, body {
   line-height: 0.8;
 }
 .middle-wrapper {
+  height: 45%;
   position: relative;
-  flex: 0 3 15em;
 }
 .middle-wrapper .progress-bar{
-  text-align: center;
-  position:relative;
-  top:60px;
+  position:absolute;
+  top: 60%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
 .bottom-wrapper {
+  height: 45%;
+  position: relative;
   text-align: center;
-  flex: 0 3 15em;
-  position:relative;
-  top:50px;
 }
 .bottom-wrapper table {
-
+  position:relative;
+  top:60px;
   margin:0 auto;
   border-spacing: 6px 6px;
 }
@@ -44,21 +46,33 @@ html, body {
 
 
 @media (min-width: 568px) {
+  .wrapper {
+    display: inline-block;
+    vertical-align: top;
+  }
   .middle-wrapper, .bottom-wrapper {
-    display:flex;
-    align-items: center;
-    top:0;
+    width:40%;
+    height: 100%;
+  }
+  .bottom-wrapper table {
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left:38%;
+    transform: translate(-50%,-50%);
+    padding: 0;
   }
   .middle-wrapper .progress-bar {
-    top:0;
-    left:15px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
   }
-  .bottom-wrapper {
-    right:35px;
+  .top-wrapper {
   }
-  .container {
-    flex-direction: row;
+  .middle-wrapper {
   }
+
 }
 
 .switch {
