@@ -18,11 +18,7 @@ html, body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-.top-wrapper {
-
-}
-.top-wrapper label {
+.middle-wrapper label {
   font-size: 26px;
   line-height: 0.8;
 }
@@ -35,6 +31,7 @@ html, body {
 .middle-wrapper .progress-bar{
   text-align: center;
   padding-top:25%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -45,8 +42,10 @@ html, body {
   margin:0 auto;
   border-spacing: 6px 6px;
   padding-top:15%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 
 
 
@@ -66,8 +65,9 @@ html, body {
     padding-top:0;
   }
   .bottom-wrapper table {
-    padding-top:0;
     margin: 0;
+    padding-left:15%;
+    padding-top:0;
   }
   .bottom-wrapper {
   }
@@ -78,6 +78,10 @@ html, body {
     -ms-flex-direction: row;
     flex-direction: row;
     min-height: 100%;
+  }
+  .header-label {
+    height:100%;
+    margin-bottom:auto;
   }
 }
 
