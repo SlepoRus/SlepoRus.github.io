@@ -24,7 +24,7 @@
       document.getElementsByClassName('container')[0].style.height = window.innerHeight + "px";
     }
     getNormalVH();
-    window.onresize = getNormalVH;
+    window.addEventListener('resize', getNormalVH);
     window.addEventListener('orientationchange', getNormalVH);
 })()
 function setValue(el, ddd) {
