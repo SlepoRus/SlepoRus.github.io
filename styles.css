@@ -45,7 +45,7 @@ body {
 }
 
 
-@media (min-width: 568px)  and (min-height: 320px) {
+@media (min-width: 568px) {
   .wrapper {
     display: inline-block;
     vertical-align: top;
