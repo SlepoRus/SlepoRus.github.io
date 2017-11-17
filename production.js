@@ -25,6 +25,7 @@
     }
     getNormalVH();
     window.onresize = getNormalVH;
+    window.addEventListener('orientationchange', getNormalVH);
 })()
 function setValue(el, ddd) {
   var targ = document.getElementById(ddd);
