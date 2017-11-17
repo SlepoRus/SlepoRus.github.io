@@ -3,6 +3,7 @@
       progress = document.getElementsByClassName('progress-bar')[0],
       slice = [].slice,
       fields_array = slice.call(html_array),
+      htmlWidth = window.innerWidth,
       checkbox = fields_array.filter(function(val) {
         return val.type === "checkbox";
       }),
@@ -19,7 +20,14 @@
         checkbox[i].checked = !!progress.progressBar[name];
       }
     }
-
+    function getNormalVH() {
+      if (window.innerHeight != windowWidth)
+      document.getElementsByClassName('container')[0].style.height = window.innerHeight + "px";
+      windowWidth = window.innerWidth;
+    }
+    getNormalVH();
+    window.addEventListener('resize', getNormalVH);
+    window.addEventListener('orientationchange', getNormalVH);
 })()
 function setValue(el, ddd) {
   var targ = document.getElementById(ddd);
