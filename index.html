@@ -6,43 +6,43 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="container">
-      <div class="middle-wrapper wrapper ">
-        <div class="header-label">
-          <label>Progress</label>
+    <div class="b-container">
+      <div class="b-container__top">
+        <div class="b-container__header">
+          <label class="b-container__label">Progress</label>
         </div>
-        <div class="progress-bar" data-value='12' id="ddd"></div>
+        <div class="progress-bar b-progress-bar b-progress-bar--step" data-value='12' id="ddd"></div>
       </div>
-      <div class="bottom-wrapper wrapper">
-        <table>
-          <tr>
-            <td>
-              <input type="text" value="0" onchange="setValue(this, 'ddd')">
+      <div class="b-container__bottom">
+        <table class="b-table b-table--step">
+          <tr class="b-table__row">
+            <td class="b-table__cell">
+              <input class="b-table__input text" type="text" value="0" onchange="setValue(this, 'ddd')">
             </td>
-            <td>
-              <label class="text-helper">Value</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label class="switch">
-                <input type="checkbox" name="animate" onchange="setAnimate(this, 'ddd')">
-                <span class="slider round"></span>
-              </label>
-            </td>
-            <td>
-              <label class="text-helper">Animate</label>
+            <td class="b-table__cell">
+              <label class="b-table__text">Value</label>
             </td>
           </tr>
-          <tr>
-            <td>
-              <label class="switch">
-                <input type="checkbox" name="hidden" onchange="setHidden(this, 'ddd')">
-                <span class="slider round"></span>
+          <tr class="b-table__row">
+            <td class="b-table__cell">
+              <label class="b-switch">
+                <input class="b-switch__checkbox" type="checkbox" name="animate" onchange="setAnimate(this, 'ddd')">
+                <span class="round b-switch__slider"></span>
               </label>
             </td>
-            <td>
-                <label class="text-helper">Hide</label>
+            <td class="b-table__cell">
+              <label class="b-table__text">Animate</label>
+            </td>
+          </tr>
+          <tr class="b-table__row">
+            <td class="b-table__cell">
+              <label class="b-switch">
+                <input class="b-switch__checkbox" type="checkbox" name="hidden" onchange="setHidden(this, 'ddd')">
+                <span class="round b-switch__slider"></span>
+              </label>
+            </td>
+            <td class="b-table__cell">
+              <label class="b-table__text">Hide</label>
             </td>
           </tr>
         </table>

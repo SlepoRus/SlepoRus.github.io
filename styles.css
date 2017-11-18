@@ -4,7 +4,7 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
-.container {
+.b-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,64 +18,94 @@ html, body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.middle-wrapper label {
+.b-container__top label {
   font-size: 26px;
   line-height: 0.8;
 }
-.middle-wrapper, .bottom-wrapper {
+.b-container__top, .b-container__bottom {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
-.middle-wrapper .progress-bar{
+.b-container__bottom {
   text-align: center;
-  padding-top:25%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
-
-.bottom-wrapper {
+.b-progress-bar {
   text-align: center;
+  margin-top:auto;
 }
-.bottom-wrapper table {
+.b-progress-bar.b-progress-bar--step {
+  padding-bottom: 10px;
+}
+.b-table {
   margin:0 auto;
   border-spacing: 6px 6px;
+}
+.b-table.b-table--step {
   padding-top:15%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-
-
+.b-table__cell {
+  vertical-align: middle;
+  text-align: left;
+}
+.b-table__row {
+  vertical-align: top;
+  height:30px;
+}
+.b-table__text {
+  font-size:18px;
+}
+.b-table__input.text {
+  width:27px;
+  border-radius: 34px;
+  border:1px solid black;
+  padding-left:5px;
+  padding-right: 5px;
+  height: 20px;
+  text-align: center;
+  font-size:16px;
+}
 @media (min-width: 768px) {
-  .middle-wrapper {
+  .b-container__top {
     justify-content: space-between;
   }
 }
 @media (min-width: 568px) {
-  .middle-wrapper, .bottom-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  .b-container__top, .b-container__bottom {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    top:0;
   }
-  .middle-wrapper .progress-bar {
-    padding-top:0;
+  .b-progress-bar {
+    margin-top:0;
   }
-  .bottom-wrapper table {
+  .b-progress-bar.b-progress-bar--step {
+    padding-bottom: 0;
+  }
+  .b-table {
     margin: 0;
-    padding-left:15%;
-    padding-top:0;
   }
-  .bottom-wrapper {
+  .b-container__bottom {
   }
-  .container {
+  .b-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -83,26 +113,29 @@ html, body {
     flex-direction: row;
     min-height: 100%;
   }
-  .header-label {
+  .b-container__header {
     height:100%;
     margin-bottom:auto;
   }
+  .b-table.b-table--step {
+      padding-left:15%;
+      padding-top:0;
+  }
 }
 
-.switch {
+
+
+.b-switch {
   position: relative;
   display: inline-block;
   width: 39px;
   height: 24px;
 }
 
-.text-helper {
-  font-size:18px;
 
-}
-.switch input[type=checkbox] {display:none;}
+.b-switch__input-radio {display:none;}
 
-.slider {
+.b-switch__slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -116,7 +149,7 @@ html, body {
   border-radius: 30%;
 }
 
-.slider:before {
+.b-switch__slider:before {
   position: absolute;
   content: "";
   height: 22px;
@@ -127,40 +160,20 @@ html, body {
 
 }
 
-input[type=text] {
-  width:27px;
-  border-radius: 34px;
-  border:1px solid black;
-  padding-left:5px;
-  padding-right: 5px;
-  height: 20px;
-  text-align: center;
-  font-size:16px;
-}
-
-tr td:nth-last-child(1) {
-  vertical-align: middle;
-  text-align: left;
-}
-tr {
-  vertical-align: top;
-  height:30px;
-}
-
-input[type=checkbox]:checked + .slider {
+.b-switch__checkbox:checked + .b-switch__slider {
   background-color: #00e500;
 }
 
-input[type=checkbox]:checked + .slider:before {
+.b-switch__checkbox:checked + .b-switch__slider:before {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
   transform: translateX(15px);
 }
 
-.slider.round {
+.b-switch__slider.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.b-switch__slider.round:before {
   border-radius: 50%;
 }

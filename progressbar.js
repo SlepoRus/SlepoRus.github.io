@@ -169,7 +169,7 @@
     },
     //Спрятать элемент
     setHidden: function(status) {
-      var el = this.element;
+      var canvas = this.element;
 
       status ? el.style.display = "none" : el.style.display = "block";
       this.options.hidden = !!status;
