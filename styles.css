@@ -123,8 +123,6 @@ html, body {
   }
 }
 
-
-
 .b-switch {
   position: relative;
   display: inline-block;
@@ -156,7 +154,7 @@ html, body {
   width: 22px;
   left: 1px;
   bottom: 1px;
-  background-color: white;
+  background-color: #ddd;
 
 }
 
@@ -168,6 +166,7 @@ html, body {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
   transform: translateX(15px);
+  background-color: white;
 }
 
 .b-switch__slider.round {
