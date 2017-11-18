@@ -32,7 +32,7 @@
   //Что то вроде приватных методов класса
   //Установка настроек прогресс бара
   function checkDOM() {
-    if (!document) {
+    if (typeof document === "undefined") {
       throw('document is undefined');
     }
   }
@@ -177,16 +177,18 @@
   }
 
   //Автоматическая инициализация уже созданных в DOM прогресс-баров
+  if (typeof document !== "undefined") {
+    elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
+    for (var i = 0; i<elements.length; i++) {
+      var el = elements[i];
 
-  elements = document.querySelectorAll ? document.querySelectorAll(PROGRESS_CLASS_NAME_WITH_DOT) : document.getElementsByClassName(PROGRESS_CLASS_NAME);
-  for (var i = 0; i<elements.length; i++) {
-    var el = elements[i];
-
-    el.progressBar = new ProgressCircleBar(el);
-    el.progressBar.setValue(el.getAttribute('data-value'));
-    el.progressBar.setAnimate(el.getAttribute('data-animate'));
-    el.progressBar.setHidden(el.getAttribute('data-hidden'));
+      el.progressBar = new ProgressCircleBar(el);
+      el.progressBar.setValue(el.getAttribute('data-value'));
+      el.progressBar.setAnimate(el.getAttribute('data-animate'));
+      el.progressBar.setHidden(el.getAttribute('data-hidden'));
+    }
   }
+
 
   return ProgressCircleBar;
 });
