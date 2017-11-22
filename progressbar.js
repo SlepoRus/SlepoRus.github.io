@@ -52,15 +52,30 @@
   }
   //Попытка получить из DOM элемент
   function getDOMObject(el) {
-      el = (document.querySelector && document.querySelector(el)) || document.getElementById(el) || document.getElementsByClassName(el);
-      if (!el) {
+
+      el = query(el);
+      if (el.length == 0) {
         throw('No elements found. Single results expected');
       } else if (el.length > 1) {
         throw('Multiply results found. Single results expected');
+      } else if (el.length == 1) {
+        el = el[0];
       }
 
       return el;
   }
+
+  function query(selector) {
+    var el;
+
+    el = document.querySelectorAll && document.querySelectorAll(selector);
+    if (!el || el.length == 0) {
+      el = document.getElementById(selector) || document.getElementsByClassName(selector);
+    }
+
+    return el;
+  }
+
   //Проверка на canvas
   function getCanvas() {
       var canvas = document.createElement('canvas');
