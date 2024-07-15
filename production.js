@@ -41,34 +41,34 @@
 
     const currentCount = Number(count.innerHTML);
 
-    if (currentCount > 18) {
-      img.src = "https://static.wikia.nocookie.net/modistalker/images/f/f3/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9F%D0%A2-0.jpg/revision/latest?cb=20190520194052&path-prefix=ru";
+    if (currentCount > 1000) {
       imgText.innerHTML = 'Толиков'
-      if(currentCount === 19) {
+      if(currentCount === 1001) {
+        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV_y5SAK5p6eqisAAf4ory1UYVOV-cAnidMA&s";
         createPromo('НАХУЯ ТЫ НА ЭТО КЛИКАЕШЬ?')
       }
-    } else if (currentCount > 15) {
-      img.src = "https://flomaster.top/o/uploads/posts/2023-11/1700486746_flomaster-top-p-milii-multyashnii-khomyak-narisovannie-akr-2.jpg";
+    } else if (currentCount > 500) {
       imgText.innerHTML = "хомяков"
-      if(currentCount === 16) {
+      if(currentCount === 501) {
+        img.src = "https://flomaster.top/o/uploads/posts/2023-11/1700486746_flomaster-top-p-milii-multyashnii-khomyak-narisovannie-akr-2.jpg";
         createPromo('БЛЯ НЕ ТА ИГРА')
       }
-    } else if (currentCount > 12) {
-      img.src = 'https://pizzatorg.ru/wa-data/public/shop/products/25/00/25/images/31/31.400@2x.jpg';
+    } else if (currentCount > 100) {
       imgText.innerHTML = "пицц с салями"
-      if(currentCount === 13) {
+      if(currentCount === 101) {
+        img.src = 'https://pizzatorg.ru/wa-data/public/shop/products/25/00/25/images/31/31.400@2x.jpg';
         createPromo('ДА ТЫ НАХУЯРИЛ НА ПИЦЦУ')
       }
-    } else if (currentCount > 8) {
-      img.src = 'https://kmpp.ru/upload/iblock/c0d/c0d114c1348a6ddf2b78b8e48618f81b.jpg';
+    } else if (currentCount > 50) {
       imgText.innerHTML = "докторских колбас"
-      if(currentCount === 9) {
+      if(currentCount === 51) {
+        img.src = 'https://kmpp.ru/upload/iblock/c0d/c0d114c1348a6ddf2b78b8e48618f81b.jpg';
         createPromo('ДА ТЫ ДОКТОРСКИХ КОЛБАС КОРОЛЬ')
       }
-    } else if (currentCount > 3) {
-      img.src = 'https://images.techinsider.ru/upload/img_cache/382/3826e54acea11aeb55b9f62451da21f6_ce_1154x769x63x0.jpeg';
+    } else if (currentCount > 25) {
       imgText.innerHTML = "сарделек"
-      if(currentCount === 4) {
+      if(currentCount === 26) {
+        img.src = 'https://images.techinsider.ru/upload/img_cache/382/3826e54acea11aeb55b9f62451da21f6_ce_1154x769x63x0.jpeg';
         createPromo('ДА ТЫ САРДЕЛЬНЫЙ МАГНАТ')
       }
     }
