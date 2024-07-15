@@ -7,49 +7,24 @@
   </head>
   <body>
     <div class="b-container">
-      <div class="b-container__top">
-        <div class="b-container__header">
-          <label class="b-container__label">Progress</label>
-        </div>
-        <div class="progress-bar b-progress-bar b-progress-bar--step" data-value='12' id="ddd"></div>
+      <div class="corner">
+        1 сосика = $1
       </div>
-      <div class="b-container__bottom">
-        <table class="b-table b-table--step">
-          <tr class="b-table__row">
-            <td class="b-table__cell">
-              <input class="b-table__input text touch-disable" type="text" value="0" onchange="setValue(this, 'ddd')">
-            </td>
-            <td class="b-table__cell">
-              <label class="b-table__text">Value</label>
-            </td>
-          </tr>
-          <tr class="b-table__row">
-            <td class="b-table__cell">
-              <label class="b-switch touch-disable">
-                <input class="b-switch__checkbox" type="checkbox" name="animate" onchange="setAnimate(this, 'ddd')">
-                <span class="round b-switch__slider"></span>
-              </label>
-            </td>
-            <td class="b-table__cell">
-              <label class="b-table__text">Animate</label>
-            </td>
-          </tr>
-          <tr class="b-table__row">
-            <td class="b-table__cell">
-              <label class="b-switch touch-disable">
-                <input class="b-switch__checkbox" type="checkbox" name="hidden" onchange="setHidden(this, 'ddd')">
-                <span class="round b-switch__slider"></span>
-              </label>
-            </td>
-            <td class="b-table__cell">
-              <label class="b-table__text">Hide</label>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
+        <div id="ads">
 
-    <script src="./progressbar.js"></script>
+        </div>
+        <div id="sosiska">
+            <img id="img" width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVx5IPk1a6gRCgonWay_57xEEN7rpPSahXTw&s" />
+        </div>
+
+        <span class="text">
+          У тебя <span id="count">0</span> <span id="img-text">сосисок</span>
+        </span>
+        <div id="wow">
+            ААА
+        </div>
+    
+    </div>
     <script src="./production.js"></script>
   </body>
 </html>
