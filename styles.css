@@ -4,6 +4,10 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
+* {
+  touch-action: manipulation;
+}
+
 .b-container {
   height: 100vh;
   display: flex;
